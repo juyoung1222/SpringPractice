@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Thymeleaf3</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	
+	<ul>
+    <!-- 절대 경로 처리 http://localhost:8080/sample1 -->
+    <li><a th:href="@{http://localhost:8094/sample1}">sample1</a></li>
+    <!-- 컨텍스트 경로 처리 /boot05/sample1 -->
+    <li><a th:href="@{/sample1}">sample1</a></li>
+    <!-- 현재 프로젝트 경로 /sample1 -->
+    <li><a th:href="@{~/sample1}">sample1</a></li>
+    <!-- 파라메터 전달 -->
+    <li><a th:href="@{/sample1(p1='aaa', p2='bbb')}">sample1</a></li>
+</ul>
+	
+</body>
+</html>
