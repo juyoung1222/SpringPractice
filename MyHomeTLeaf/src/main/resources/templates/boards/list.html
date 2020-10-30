@@ -88,7 +88,9 @@
 	
 		$(window).load(function(){
 			
-			var msg = [[${msg}]];
+			/*<![DATA[*/
+			var msg = /*[[${msg}]]*/ null;
+			/*]]>*/
 			
 			
 			if(msg =='success') {
@@ -116,7 +118,11 @@
 				
 				var boardNo = $(this).attr("href");
 				
-				formObj.attr("action",[[@{'/boards/view'}]]);
+				formObj.attr("action",
+				/*<![DATA[*/
+						/*[[@{'/boards/view'}]]*/
+				/*]]>*/
+				);
 				formObj.append("<input type='hidden' name='bno' value='" + boardNo +"'>" );
 				
 				formObj.submit();
